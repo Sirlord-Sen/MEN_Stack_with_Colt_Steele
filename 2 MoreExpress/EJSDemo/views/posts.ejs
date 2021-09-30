@@ -1,0 +1,16 @@
+<% include partials/header %>
+<h1>POSTS Page</h1>
+<!-- This is using the regular for loop to loop through the array -->
+<% for(var i = 0; i < posts.length; i ++){ %>
+    <li>
+        <%= posts[i].title %> - <strong> <%= posts[i].author %> </strong>
+    </li>
+<% } %>
+<br>
+<!-- Using forEach to loop through -->
+<% posts.forEach(function(posts){ %>
+    <li>
+        <%= posts.title %> - <strong> <%= posts.author %> </strong>
+    </li>
+<% }); %>
+<% include partials/footer %>
